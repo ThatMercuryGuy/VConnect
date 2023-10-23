@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
+    <title>Dashboard</title>
+  </head>
+  <style>
+    * {
+      font-family: "Ubuntu", sans-serif;
+      transition: all 0.15s ease-out;
+    }
+    .nue {
+      background: linear-gradient(to bottom right, #f0f0f0, #ece8e8);
+      box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <body class="bg-white">
+    <nav
+      class="h-[12vh] bg-slate-100 text-black flex justify-evenly items-center mt-[-3px] text-[#161925]"
+    >
+      <div class="font-extrabold text-2xl">vConnect</div>
+      <div class="flex w-[45vw] h-[10vh] items-center justify-center">
+        <button
+          class="font-normal text-lg w-[15vw] h-[10vh] flex gap-2 items-center justify-center hover:scale-110 hover:text-purple-700"
+        >
+          <i class="text-black text-2xl fa-light fa-house-user"></i>
+          Home
+        </button>
+        <button
+          class="font-normal text-lg w-[15vw] h-[10vh] flex items-center justify-center hover:scale-110"
+        >
+          Explore
+        </button>
+        <button
+          class="font-normal text-lg w-[15vw] h-[10vh] flex items-center justify-center hover:scale-110"
+        >
+          Friends
+        </button>
+      </div>
+      <button class="font-bold text-lg">Logout</button>
+    </nav>
+
+    <section id="main" class="w-full h-[90vh] px-12 py-10 gap-10">
+      <h2 class="text-3xl font-medium">Join Any Of These Activities</h2>
+
+      <div class="mt-16 w-auto h-[500px] rounded-md py-2 px-8 nue mb-10">
+        <h3 class="text-2xl font-light my-4">Curated Home Page</h3>
+        <div class="flex gap-24">
+
+          <div class="h-[60vh] rounded-md w-auto py-4" id="oof">
+            <div
+              class="w-[325px] border-[#7C30FF] border-[2px] text-black rounded-xl shadow-xl flex flex-col py-6 px-6 gap-10"
+            >
+              <h4 class="font-thin text-2xl text-black">
+                Singing in Rajajinagar
+              </h4>
+              <ul>
+                <li><b>Description</b> : Bhajans</li>
+                <li><b>Time</b> : 6pm</li>
+                <li><b>Number of people</b> : 10</li>
+                <li><b>Match</b> : 80% Chance you like this</li>
+                <li>
+                  <b>Address</b> : #135, Dr Rajkumar Rd, 1st K Block, 2nd Stage,
+                  Rajajinagar, Bengaluru, Karnataka 560010
+                </li>
+              </ul>
+              <button
+                onclick="destroy()"
+                class="border-[1px] border-[#071c2c] bg-[#071c2c] px-2 py-4 text-white rounded-lg hover:scale-110 hover:bg-transparent hover:text-[#071c2c] transition ease-out duration-250"
+              >
+                Join now
+              </button>
+              <!-- **potlock*  also dont swear my dad comnig adn seeing progress aight bro dis sucks the evenely thingy-->
+            </div>
+          </div>
+
+          <div class="h-[60vh] rounded-md w-auto py-4" id="oof1">
+            <div
+              class="w-[325px] border-[#7C30FF] border-[2px] text-black rounded-xl shadow-xl flex flex-col py-6 px-6 gap-10"
+            >
+              <h4 class="font-thin text-2xl text-black">
+                Singing in Malleswaram
+              </h4>
+              <ul>
+                <li><b>Description</b> : Karaoke</li>
+                <li><b>Time</b> : 7pm</li>
+                <li><b>Number of people</b> : 23</li>
+                <li><b>Match</b> : 54% chance you like this</li>
+                <li>
+                  <b>Address</b> : Divya MSR gateway Gokula, Mathikere, Banglore
+                  560054
+                </li>
+              </ul>
+              <button
+                onclick="destroy1()"
+                class="border-[1px] border-[#071c2c] bg-[#071c2c] px-2 py-4 text-white rounded-lg hover:scale-110 hover:bg-transparent hover:text-[#071c2c] transition ease-out duration-250"
+              >
+                Join now
+              </button>
+              <!-- **potlock*  also dont swear my dad comnig adn seeing progress aight bro dis sucks the evenely thingy-->
+            </div>
+          </div>
+          <script>
+            function destroy() {
+              document.getElementById("oof").style.opacity = 0;
+            }
+            function destroy1() {
+              documet.getElementById("oof1").style.opacity = 0;
+            }
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="bg-gray-200 absolute flex items-center justify-center text-3xl w-16 aspect-square rounded-full shadow-lg top-28 right-12"
+      onclick="newEvent()"
+      id="EventMaker"
+    >
+      <i class="fa-regular fa-plus"></i>
+    </div>
+
+    <div
+      id="first"
+      class="h-[605px] scale-[0] bg-white w-[800px] rounded-xl top-24 py-4 m-auto pl-4 shadow flex relative z-[-1]"
+    >
+      <!-- Steps -->
+      <div class="w-[150px] h-full round z-10">
+        <img
+          src="../static/bg-sidebar-desktop.png"
+          alt=""
+          class="scale-y-[1.2] scale-x-[1.1] absolute h-[420px] w-auto rounded-lg -z-10 translate-x-[20px] translate-y-[50px]"
+        />
+        <i
+          class="text-[150px] text-white ml-16 mt-32 fa-solid fa-location-plus"
+        ></i>
+        <!-- <ul class="flex flex-col gap-y-4 items-baseline py-9 pl-8">
+          <li class="li-grid">
+            <div class="flex gap-4">
+              <h1
+                class="translate-y-1.5 highlighted number w-4 h-4 border-[0.5px] border-white rounded-full p-4 flex items-center justify-center text-white"
+              >
+                1
+              </h1>
+              <div>
+                <h2
+                  class="text-[#eaeaeac5] text-sm step thin text-[13px] translate-y-1"
+                >
+                  STEP1
+                </h2>
+                <h2 class="info text-[13px] translate-y-1 semi-bold text-white">
+                  YOUR INFO
+                </h2>
+              </div>
+            </div>
+          </li>
+          <li class="li-grid">
+            <div class="flex gap-4">
+              <h1
+                class="translate-y-1.5 number w-4 h-4 border-[0.5px] border-white rounded-full p-4 flex items-center justify-center text-white"
+              >
+                2
+              </h1>
+              <div>
+                <h2
+                  class="text-[#eaeaeac5] text-sm step thin text-[13px] translate-y-1"
+                >
+                  STEP2
+                </h2>
+                <h2
+                  class="info text-[13px] translate-y-1 semi-bold text-white whitespace-nowrap"
+                >
+                  SELECT PLANS
+                </h2>
+              </div>
+            </div>
+          </li>
+          <li class="li-grid">
+            <div class="flex gap-4">
+              <h1
+                class="translate-y-1.5 number w-4 h-4 border-[0.5px] border-white rounded-full p-4 flex items-center justify-center text-white"
+              >
+                3
+              </h1>
+              <div>
+                <h2
+                  class="text-[#eaeaeac5] text-sm step thin text-[13px] translate-y-1"
+                >
+                  STEP3
+                </h2>
+                <h2 class="info text-[13px] translate-y-1 semi-bold text-white">
+                  ADD ONES
+                </h2>
+              </div>
+            </div>
+          </li>
+          <li class="li-grid">
+            <div class="flex gap-4">
+              <h1
+                class="translate-y-1.5 number w-4 h-4 border-[0.5px] border-white rounded-full p-4 flex items-center justify-center text-white"
+              >
+                4
+              </h1>
+              <div>
+                <h2
+                  class="text-[#eaeaeac5] text-sm step thin text-[13px] translate-y-1"
+                >
+                  STEP4
+                </h2>
+                <h2 class="info text-[13px] translate-y-1 semi-bold text-white">
+                  SUMMARY
+                </h2>
+              </div>
+            </div>
+          </li>
+        </ul> -->
+      </div>
+
+      <!-- Content -->
+      <div class="mx-auto mt-8">
+        <h2 class="text-3xl bold">Make A New Event</h2>
+        <h3 class="text-gray-300 mb-6">
+          Cant find the perfect event, then make one!
+        </h3>
+
+        <div class="relative">
+          <h4 class="mt-4 text-sm text-[#344457] relative">Name</h4>
+          <h5
+            id="InvalidUsername"
+            class="hidden relative text-red-500 text-sm right-0 -top-1 semi-bold italic"
+          >
+            Please enter a name
+          </h5>
+        </div>
+        <input
+          id="username"
+          class="Nicefont text-[#000a28] w-full text-sm shadow-md focus:border-blue-500 border-[0.05px] border-blue-200 px-4 p-2 border-solid rounded"
+          type="text"
+          name=""
+          id=""
+          placeholder="e.g. Satsang in Malleswaram"
+        />
+
+        <div class="relative">
+          <h4 class="mt-4 text-sm text-[#344457] relative">Description</h4>
+          <h5
+            id="InvalidPhone"
+            class="hidden relative text-red-500 text-sm right-0 -top-1 semi-bold italic"
+          >
+            Invalid phone number
+          </h5>
+        </div>
+        <input
+          id="phoneNumber"
+          class="Nicefont text-[#000a28] w-full text-sm shadow-md focus:border-blue-500 border-[0.05px] border-blue-200 px-4 p-2 border-solid rounded"
+          type="text"
+          name=""
+          id=""
+          placeholder="Short and Crisp: e.g. Bhajans"
+        />
+
+        <div class="relative">
+          <h4 class="mt-4 text-sm text-[#344457] relative">
+            Maximum people joining
+          </h4>
+          <h5
+            id="InvalidEmail"
+            class="hidden relative text-red-500 text-sm right-0 -top-1 semi-bold italic"
+          >
+            Invalid email id
+          </h5>
+        </div>
+        <input
+          id="email"
+          class="Nicefont text-[#000a28] w-full text-sm shadow-md focus:border-blue-500 border-[0.05px] border-blue-200 px-4 p-2 border-solid rounded"
+          type="number"
+          name=""
+          id=""
+          placeholder="e.g. 15"
+        />
+
+        <div class="relative">
+          <h4 class="mt-4 text-sm text-[#344457] relative">Address</h4>
+          <h5
+            id="InvalidPhone"
+            class="hidden relative text-red-500 text-sm right-0 -top-1 semi-bold italic"
+          >
+            Invalid phone number
+          </h5>
+        </div>
+        <input
+          id="phoneNumber"
+          class="Nicefont text-[#000a28] w-full text-sm shadow-md focus:border-blue-500 border-[0.05px] border-blue-200 px-4 p-2 border-solid rounded"
+          type="text"
+          name=""
+          id=""
+          placeholder="Please enter all the required details"
+        />
+
+        <div class="relative">
+          <h4 class="mt-4 text-sm text-[#344457] relative">Date & Time</h4>
+          <h5
+            id="InvalidPhone"
+            class="hidden relative text-red-500 text-sm right-0 -top-1 semi-bold italic"
+          >
+            Invalid phone number
+          </h5>
+        </div>
+        <input
+          id="phoneNumber"
+          class="Nicefont text-[#000a28] w-full text-sm shadow-md focus:border-blue-500 border-[0.05px] border-blue-200 px-4 p-2 border-solid rounded"
+          type="datetime-local"
+          name=""
+          id=""
+          placeholder="Please enter all the required details"
+        />
+        <button
+          id="submit1"
+          class="button bg-[#002c69] rounded text-white px-4 py-2 h-11 translate-x-[320px] translate-y-[30px] hover:bg-[#5442b9] cursor-pointer"
+          onclick="getBack()"
+        >
+          Next Step
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script>
+  var New = document.getElementById("first");
+  var Main = document.getElementById("main");
+  var EventMaker = document.getElementById("EventMaker");
+
+  function newEvent() {
+    // Part 2 disappears
+    TweenMax.to(Main, 0.5, { opacity: 0, display: "none", ease: "sine.out" });
+    TweenMax.to(Main, 1.5, { scale: "1.25", zIndex: -10, ease: "sine.out" });
+    TweenMax.to(EventMaker, 1, { opacity: 0, ease: "sine.out" });
+
+    // Part 1 appears
+    TweenMax.to(New, 0.00000001, { scale: "0.9" });
+    TweenMax.to(New, 0.5, {
+      opacity: "1",
+      delay: 0.5,
+      ease: "sine.out",
+    });
+    TweenMax.to(New, 0.5, {
+      scale: "1",
+      zIndex: 10,
+      delay: 0.5,
+      ease: "sine.out",
+    });
+  }
+
+  function getBack() {
+    // Part 2 disappears
+    TweenMax.to(New, 0.5, { opacity: 0, ease: "sine.out" });
+    TweenMax.to(New, 1.5, { scale: "1.25", zIndex: -10, ease: "sine.out" });
+
+    // Part 1 appears
+    TweenMax.to(EventMaker, 1, { opacity: 1, ease: "sine.out" });
+    TweenMax.to(Main, 0.00000001, { scale: "0.8" });
+    TweenMax.to(Main, 0.5, {
+      opacity: "1",
+      delay: 0.5,
+      ease: "sine.out",
+    });
+    TweenMax.to(Main, 0.5, {
+      display: "inline",
+      scale: "0.8",
+      zIndex: 10,
+      delay: 0.5,
+      ease: "sine.out",
+    });
+  }
+</script>

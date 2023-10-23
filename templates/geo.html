@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<form method="POST" action="/d">
+    <input id="demo" name="lats" type="text">
+    <input id="long" name="long" type="text">
+    <input type="submit">
+</form>
+
+<script>
+    var x = document.getElementById("demo");
+    var y = document.getElementById("long")
+    function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.value = "Geolocation is not supported by this browser.";
+    }
+    }
+
+
+
+    function showPosition(position) {
+        x.value = position.coords.latitude;
+        y.value = position.coords.longitude;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+sample Activity columns
+
+Name
+Number of People expected
+Category (Music, Movie-Watching, etc.)
+Latitude
+Longtitude
+Description
+Name of Organiser
+Phone
+Date and Time
+Age pref
+Gender pref
+
+Profiles Table Cols
+Name
+Email/Phone
+Age
+Gender
+Longitude
+Location
+Interests
+Preferred Distance for transit
